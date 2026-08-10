@@ -223,8 +223,23 @@ main {
 
 .tech-front h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--white);
+}
+
+.tech-icon {
+    padding: 0 0 10px 0;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+
+    transition: transform 0.3s ease;
+}
+
+.tech-icon-invert {
+    filter: invert(1);
 }
 
 .tech-back {
