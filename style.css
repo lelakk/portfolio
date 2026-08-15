@@ -59,6 +59,7 @@ main {
 .header-titles {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .header-title {
@@ -374,4 +375,63 @@ main {
 
 .github-icon {
     filter: invert(1);
+}
+
+/*CONTACT*/
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: color-mix(in srgb, var(--white) 3%, transparent);
+    border: 1px solid var(--underscore);
+    border-radius: 12px;
+    padding: 60px 20px;
+}
+
+.contact-text {
+    max-width: 600px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-btn {
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background: var(--lessdarkblue);
+    color: var(--lightblue);
+    border: 1px solid var(--underscore);
+}
+
+.btn:hover {
+    border-color: var(--lightblue);
+    background: color-mix(in srgb, var(--lightblue) 10%, transparent);
+}
+
+/*STOPKA*/
+
+.site-footer {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid var(--underscore);
+    color: color-mix(in srgb, var(--text) 30%, transparent);
+    font-size: 0.9rem;
 }
