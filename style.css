@@ -204,7 +204,7 @@ main {
     height: 280px;
     width: 220px;
     max-width: 100%;
-    cursor: pointer;
+    cursor: default;
 }
 
 .tech-face {
