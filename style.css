@@ -12,13 +12,15 @@
     --underscore: rgba(255, 255, 255, 0.08);
 
     /* more specific colors */
+    --body-grid-lines: rgba(255, 255, 255, 0.027);
+
     --scrollbar-track: var(--darkblue);
     --scrollbar-thumb: #1e293b;
     --scrollbar-thumb-hover: #334155;
     --selection-bg: rgba(56, 189, 248, 0.25);
 
-    --header-bg: color-mix(in srgb, var(--darkblue) 88%, transparent);
-    --card-bg: color-mix(in srgb, var(--lessdarkblue) 75%, transparent);
+    --header-footer-bg: color-mix(in srgb, var(--darkblue) 88%, transparent);
+    --card-bg: color-mix(in srgb, var(--lessdarkblue) 33%, transparent);
 
     --btn-hover-bg: #19253b;
     --btn-hover-text: var(--white);
@@ -55,13 +57,18 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 140px;
 }
-/* TODO: add subtle background pattern */
+
 body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text);
     background-color: var(--darkblue);
+    background-image:
+        linear-gradient(to right, var(--body-grid-lines) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--body-grid-lines) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -86,10 +93,11 @@ main {
     align-items: center;
     height: 100px;
     padding: 0 40px;
-    background: var(--header-bg);
+    background: var(--header-footer-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--underscore);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4)
 }
 
 .header-titles {
@@ -459,8 +467,9 @@ main {
 /*STOPKA*/
 
 .site-footer {
+    background: var(--header-footer-bg);
     margin-top: 40px;
-    padding: 20px;
+    padding: 12px;
     text-align: center;
     border-top: 1px solid var(--underscore);
     color: var(--text-muted);
