@@ -12,6 +12,7 @@
     --underscore: rgba(255, 255, 255, 0.08);
 
     /* more specific colors */
+    --section-number: #7bacef;
     --body-grid-lines: rgba(255, 255, 255, 0.027);
 
     --scrollbar-track: var(--darkblue);
@@ -182,7 +183,18 @@ main {
 }
 
 .section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.section-number {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: var(--lightblue);
+    letter-spacing: 3px;
 }
 
 .section-title {
@@ -230,91 +242,63 @@ main {
 }
 
 /*TECHNOLOGIES*/
-
-.tech-grid {
+.technologies-content{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: 25px;
 }
 
-.tech-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 280px;
-    width: 220px;
-    max-width: 100%;
-    cursor: default;
+.technologies-categories{
+    display: grid;
+    grid-template-columns: 260px 1fr;
 }
 
-.tech-face {
-    box-sizing: border-box;
-    width: 100%;
-    height: 140px;
+/* TODO: fix row separator lines blending into background grid */
+.category-items{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    transition: transform 0.45s;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--underscore);
+    gap: 20px;
 }
-/* TODO: restyle entire technology section */
-.tech-front {
-    background: var(--lessdarkblue);
+
+.category-title {
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    padding: 35px 0;
+    border-bottom: 1px solid var(--underscore);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.technology-item{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
     border: 1px solid var(--underscore);
-    z-index: 2;
-    transform: translateY(70px);
-    border-radius: 6px;
-    position: relative;
-}
-
-.tech-front h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: var(--white);
-}
-
-.tech-icon {
-    padding: 0 0 10px 0;
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
-    transition: transform 0.3s ease;
-}
-
-.tech-icon-invert {
-    filter: invert(0.9);
-}
-
-.tech-back {
-    background: var(--lessdarkblue);
     color: var(--text);
-    border: 1px solid var(--underscore);
-    border-top: none;
-    z-index: 1;
-    transform: translateY(-70px);
-    padding: 15px 20px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-    border-radius: 0 0 8px 8px;
+    padding: 9px 16px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    user-select: none;
 }
 
-.tech-details {
-    margin: 0;
-    padding-left: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    line-height: 1.6;
-    width: 100%;
+.technology-item:hover{
+    border-color: var(--lesslightblue);
 }
 
-.tech-card:hover .tech-front {
-    transform: translateY(0);
-}
-
-.tech-card:hover .tech-back {
-    transform: translateY(0);
+.technology-icon{
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 /*PROJECTS*/
@@ -479,6 +463,16 @@ main {
 /*MOBILE*/
 
 @media (max-width: 850px) {
+
+    .section-header {
+        margin-bottom: 25px;
+        padding-left: 20px;
+    }
+
+    .section-number {
+        font-size: 0.85rem;
+    }
+
     .header-container {
         flex-direction: column;
         height: auto;
@@ -501,7 +495,6 @@ main {
     }
 
     /*NAV*/
-
     .nav-sidebar, .nav-list {
         width: 100%;
         flex-wrap: wrap;
@@ -528,19 +521,18 @@ main {
         height: 220px;
     }
 
-    .tech-face {
-        padding-top: 20px;
+    /*TECHNOLOGIES*/
+
+    .technologies-categories {
+        grid-template-columns: 1fr;
     }
 
-    /* TODO: remove "tap to see"/replace with smth else */
-    .tech-front::after {
-        content: "tap to see";
-        position: absolute;
-        top: 4px;
-        font-size: 0.65rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--text-muted);
+    .category-title {
+        padding: 20px 0 20px 0;
+        border-bottom: none;
+    }
+
+    .category-items {
+        padding: 0 0 20px 0;
     }
 }

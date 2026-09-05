@@ -26,6 +26,7 @@
 <main>
     <section id="aboutme" class="section-container">
         <div class="section-header">
+            <span class="section-number">§ [01]</span>
             <h2 class="section-title">About me</h2>
         </div>
         <div class="aboutme-content">
@@ -48,124 +49,74 @@
 
     <section id="technologies" class="section-container">
         <div class="section-header">
+            <span class="section-number">§ [02]</span>
             <h2 class="section-title">Technologies</h2>
         </div>
-        <div class="tech-grid">
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/python-icon.svg" alt="Python logo" class="tech-icon">
-                    <h3>Python</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Data analysis</li>
-                        <li>Automation scripting</li>
-                        <li>AI / ML fundamentals</li>
-                    </ul>
-                </div>
+        <div class="technologies-categories">
+            <span class="category-title">Languages</span>
+            <div class="category-items">
+                <span class="technology-item">
+                    <img src="icons/python-icon.svg" alt="Python icon" class="technology-icon">
+                    Python
+                </span>
+                <span class="technology-item">
+                    <img src="icons/sql-icon.svg" alt="SQL icon" class="technology-icon">
+                    SQL
+                </span>
+            </div>
+            <span class="category-title">AI/Data</span>
+            <div class="category-items">
+                <span class="technology-item">
+                    <img src="icons/scikit-icon.svg" alt="Scikit-learn icon" class="technology-icon">
+                    Scikit-learn
+                </span>
+                <span class="technology-item">
+                    <img src="icons/pandas-icon.svg" alt="Pandas icon" class="technology-icon">
+                    Pandas
+                </span>
+                <span class="technology-item">
+                    <img src="icons/matplotlib-icon.svg" alt="Matplotlib icon" class="technology-icon">
+                    Matplotlib
+                </span>
+                <span class="technology-item">
+                    <img src="icons/pytorch-icon.svg" alt="PyTorch icon" class="technology-icon">
+                    PyTorch
+                </span>
             </div>
 
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/flask-icon.svg" alt="Flask logo" class="tech-icon tech-icon-invert">
-                    <h3>Flask</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Web applications</li>
-                        <li>REST APIs basics</li>
-                    </ul>
-                </div>
+            <span class="category-title">Tools/DevOps</span>
+            <div class="category-items">
+                <span class="technology-item">
+                    <img src="icons/docker-icon.svg" alt="Docker icon" class="technology-icon">
+                    Docker
+                </span>
+                <span class="technology-item">
+                    <img src="icons/git-icon.svg" alt="Git icon" class="technology-icon">
+                    Git
+                </span>
+                <span class="technology-item">
+                    <img src="icons/linux-icon.svg" alt="Linux icon" class="technology-icon">
+                    Linux
+                </span>
             </div>
 
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/git-icon.svg" alt="Git logo" class="tech-icon">
-                    <h3>Git</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Version control</li>
-                        <li>GitHub workflows</li>
-                        <li>Conflict resolution</li>
-                    </ul>
-                </div>
+            <span class="category-title">Frontend</span>
+            <div class="category-items">
+                <span class="technology-item">
+                    <img src="icons/html-icon.svg" alt="HTML icon" class="technology-icon">
+                    HTML
+                </span>
+                <span class="technology-item">
+                    <img src="icons/css-icon.svg" alt="CSS icon" class="technology-icon">
+                    CSS
+                </span>
             </div>
-
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/sql-icon.svg" alt="SQL logo" class="tech-icon">
-                    <h3>SQL</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Relational databases</li>
-                        <li>PostgreSQL</li>
-                        <li>Writing basic queries</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/docker-icon.svg" alt="Docker logo" class="tech-icon">
-                    <h3>Docker</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Containerization</li>
-                        <li>Dockerfile basics</li>
-                        <li>Environment setup</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/linux-icon.svg" alt="Linux logo" class="tech-icon">
-                    <h3>Linux</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Command Line Interface</li>
-                        <li>File system navigation</li>
-                        <li>Environment management</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/html-icon.svg" alt="HTML logo" class="tech-icon">
-                    <h3>HTML</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Semantic markup</li>
-                        <li>Web structure</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="tech-card">
-                <div class="tech-face tech-front">
-                    <img src="icons/css-icon.svg" alt="CSS logo" class="tech-icon">
-                    <h3>CSS</h3>
-                </div>
-                <div class="tech-face tech-back">
-                    <ul class="tech-details">
-                        <li>Flexbox & Grid</li>
-                        <li>Responsive Web Design</li>
-                        <li>CSS Variables</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <section id="projects" class="section-container">
         <div class="section-header">
+            <span class="section-number">§ [03]</span>
             <h2 class="section-title">Projects</h2>
         </div>
 
@@ -201,6 +152,7 @@
     </section>
     <section id="contact" class="section-container">
         <div class="section-header">
+            <span class="section-number">§ [04]</span>
             <h2 class="section-title">Contact</h2>
         </div>
 
