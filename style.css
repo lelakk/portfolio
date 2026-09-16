@@ -234,17 +234,30 @@ main {
     margin-top: 0;
     margin-bottom: 20px;
 }
-/*TODO: delete photo from aboutme */
-.aboutme-photo {
+
+.aboutme-card {
+    margin: 0;
+    padding: 25px;
+    width: 330px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.aboutme-photo img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--underscore);
+.aboutme-card dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.aboutme-card dd {
+    margin: 0;
+    color: var(--text);
+    font-weight: 400;
+    line-height: 1.4;
 }
 
 /*TECHNOLOGIES*/
@@ -280,8 +293,7 @@ main {
     font-family: 'JetBrains Mono', monospace;
     padding: 38px 0;
     border-bottom: 1px solid var(--underscore);
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--text);
@@ -518,15 +530,17 @@ main {
         font-size: 0.9rem;
     }
 
+    /*ABOUTME*/
+
     .aboutme-content {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
         gap: 40px;
     }
 
-    .aboutme-photo img {
-        width: 220px;
-        height: 220px;
+    .aboutme-card {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     /*TECHNOLOGIES*/
